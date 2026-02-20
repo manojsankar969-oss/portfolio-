@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Manoj Sankar Kokkiligadda — AI Developer & B.Tech CSE Student at NIAT. Building intelligent web experiences with Generative AI, LLMs, and modern technologies.">
+    <meta name="keywords"
+        content="Manoj Sankar K, AI Developer, B.Tech CSE, NIAT, Generative AI, LLM, Gemini API, Web Developer, Portfolio">
+    <meta name="author" content="Manoj Sankar Kokkiligadda">
+    <meta property="og:title" content="Manoj Sankar K — AI Developer & Builder">
+    <meta property="og:description"
+        content="AI Developer & B.Tech CSE Student building intelligent web experiences with Generative AI and modern technologies.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Manoj Sankar K — AI Developer & Builder</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>MSK<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="badge-dot"></span>
+                <span>Available for Projects & Collaboration</span>
+            </div>
+            <h1 class="hero-title reveal">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name">Manoj Sankar <span class="accent">K</span></span>
+                <span class="hero-role">
+                    <span class="role-prefix">I build</span>
+                    <span class="typed-text" id="typedText"></span>
+                    <span class="typed-cursor">|</span>
+                </span>
+            </h1>
+            <p class="hero-description reveal">
+                AI Developer & B.Tech CSE Student at NIAT — Building intelligent web experiences
+                with Generative AI, LLM Integration, and modern technologies.
+            </p>
+            <div class="hero-cta reveal">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Contact Me</span>
+                </a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Learning</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Tech Stack</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="accent">Me</span></h2>
+                <p class="section-subtitle">Get to know who I am and what I do</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <div class="about-card glass-card">
+                        <h3>Who I Am</h3>
+                        <p>
+                            I'm <strong>Manoj Sankar Kokkiligadda</strong>, a first-year
+                            <strong>B.Tech Computer Science Engineering</strong> student at
+                            <strong>NxtWave Institute of Advanced Technologies (NIAT)</strong>,
+                            Hyderabad, specializing in Generative AI, LLMs, and Machine Learning.
+                        </p>
+                        <p>
+                            I am passionate about technology and problem-solving, currently building
+                            AI-powered web applications and exploring full-stack development. My goal
+                            is to become a skilled developer and contribute to impactful real-world
+                            projects while continuously growing in AI and modern software development.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Generative AI & LLMs</span>
+                            </div>
+                            <div class="highlight">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Web Development</span>
+                            </div>
+                            <div class="highlight">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>API Integration</span>
+                            </div>
+                            <div class="highlight">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Deployment & Hosting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-tech reveal">
+                    <h3 class="tech-title">Tech Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-badge" data-tooltip="HTML5">
+                            <span class="tech-icon">🌐</span>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="CSS3">
+                            <span class="tech-icon">🎨</span>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="JavaScript">
+                            <span class="tech-icon">⚡</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="Python">
+                            <span class="tech-icon">🐍</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="Generative AI">
+                            <span class="tech-icon">🤖</span>
+                            <span>Gen AI</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="Google Gemini API">
+                            <span class="tech-icon">✨</span>
+                            <span>Gemini API</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="OpenWeather API">
+                            <span class="tech-icon">🌤️</span>
+                            <span>OpenWeather</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="GitHub">
+                            <span class="tech-icon">📦</span>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="Render">
+                            <span class="tech-icon">🚀</span>
+                            <span>Render</span>
+                        </div>
+                        <div class="tech-badge" data-tooltip="Domain & DNS">
+                            <span class="tech-icon">🔗</span>
+                            <span>Domain & DNS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+                <p class="section-subtitle">A showcase of my recent work and experiments</p>
+            </div>
+
+            <!-- Featured Project Spotlight -->
+            <div class="featured-project glass-card reveal">
+                <div class="featured-badge">⭐ Featured Project</div>
+                <div class="featured-content">
+                    <div class="featured-info">
+                        <h3>Climago — AI-Powered Weather App</h3>
+                        <p>An intelligent weather platform that provides real-time weather data, AI-powered travel
+                            suggestions, city comparison, and smart recommendations based on environmental conditions.
+                            Deployed live with custom domain.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">OpenWeather API</span>
+                            <span class="tag">Gemini API</span>
+                            <span class="tag">Render</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://climago.site" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/manojsankar969-oss/ClimaGo_site" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-ghost">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <div class="project-img-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1" opacity="0.3">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Project Grid -->
+            <div class="project-grid">
+                <!-- Climago Card -->
+                <div class="project-card glass-card reveal" data-category="ai">
+                    <div class="project-card-image">
+                        <div class="project-img-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1" opacity="0.3">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://climago.site" target="_blank" rel="noopener" class="overlay-btn">View
+                                Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h4>Climago Weather App</h4>
+                        <p>AI-powered weather platform with real-time data, travel suggestions, city comparison, and
+                            smart environmental recommendations.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Gemini API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://climago.site" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/manojsankar969-oss/ClimaGo_site" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-ghost">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart ODE Solver Card -->
+                <div class="project-card glass-card reveal" data-category="web">
+                    <div class="project-card-image">
+                        <div class="project-img-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1" opacity="0.3">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://car-higher-order-de-xf7y.vercel.app/" target="_blank" rel="noopener"
+                                class="overlay-btn">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h4>Smart ODE Solver</h4>
+                        <p>An intelligent differential equation solver with step-by-step solutions, interactive graphs,
+                            and an educational quiz system.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SymPy</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">MathJax</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://car-higher-order-de-xf7y.vercel.app/" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/manojsankar969-oss/car_HigherOrder_DE" target="_blank"
+                                rel="noopener" class="btn btn-sm btn-ghost">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catch The Box Card -->
+                <div class="project-card glass-card reveal" data-category="games">
+                    <div class="project-card-image">
+                        <div class="project-img-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1" opacity="0.3">
+                                <rect x="2" y="6" width="20" height="12" rx="2" />
+                                <line x1="6" y1="12" x2="10" y2="12" />
+                                <line x1="8" y1="10" x2="8" y2="14" />
+                                <circle cx="16" cy="11" r="1" />
+                                <circle cx="18" cy="13" r="1" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://catchtheboxx.niat.tech/" target="_blank" rel="noopener"
+                                class="overlay-btn">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h4>Catch The Box</h4>
+                        <p>A fun, interactive browser game where you catch falling boxes. Built with pure HTML, CSS, and
+                            JavaScript with smooth animations.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Game</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://catchtheboxx.niat.tech/" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/manojsankar969-oss" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-ghost">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Number Checker Card -->
+                <div class="project-card glass-card reveal" data-category="tools">
+                    <div class="project-card-image">
+                        <div class="project-img-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1" opacity="0.3">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://manojnumchecker.niat.tech/" target="_blank" rel="noopener"
+                                class="overlay-btn">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h4>Number Checker</h4>
+                        <p>A smart number utility tool that checks properties of numbers — prime, even/odd, palindrome
+                            and more. Clean, responsive UI.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://manojnumchecker.niat.tech/" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/manojsankar969-oss/numguessgame" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-ghost">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CodeWriter Card -->
+                <div class="project-card glass-card reveal" data-category="web">
+                    <div class="project-card-image">
+                        <div class="project-img-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1" opacity="0.3">
+                                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://codewriter-5ah9.onrender.com/" target="_blank" rel="noopener"
+                                class="overlay-btn">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h4>CodeWriter</h4>
+                        <p>An intelligent code generation and management tool designed for developers. Streamlined and
+                            efficient.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Render</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://codewriter-5ah9.onrender.com/" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/manojsankar969-oss/codewriter-" target="_blank" rel="noopener"
+                                class="btn btn-sm btn-ghost">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="accent">Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <!-- AI & Tools -->
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🤖</div>
+                        <h3>AI & Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Generative AI</span>
+                                <span class="skill-percent">50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>LLM Integration</span>
+                                <span class="skill-percent">45%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="45"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>OpenWeather API</span>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Google Gemini API</span>
+                                <span class="skill-percent">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🌐</div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML</span>
+                                <span class="skill-percent">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CSS</span>
+                                <span class="skill-percent">55%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="55"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span class="skill-percent">50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deployment -->
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🚀</div>
+                        <h3>Deployment</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Render</span>
+                                <span class="skill-percent">50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>GitHub</span>
+                                <span class="skill-percent">55%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="55"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Domain & DNS</span>
+                                <span class="skill-percent">50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">My <span class="accent">Journey</span></h2>
+                <p class="section-subtitle">Education, projects, and milestones</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2025 — Present</span>
+                        <h4>B.Tech CSE — NxtWave Institute of Advanced Technologies</h4>
+                        <p>First-year Computer Science Engineering student at NIAT, Hyderabad. Specializing in
+                            Generative AI, LLMs, and modern software development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2025</span>
+                        <h4>Building AI-Powered Web Applications</h4>
+                        <p>Developed Climago — an AI-powered weather app integrating OpenWeather API and Google Gemini
+                            API for intelligent travel suggestions, city comparison, and smart recommendations. Deployed
+                            live at climago.site.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2025</span>
+                        <h4>Deploying Full-Stack Projects</h4>
+                        <p>Gained hands-on experience deploying production-ready applications on Render and Vercel,
+                            managing custom domains & DNS, and building responsive, premium-quality web interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+                <p class="section-subtitle">Let's build something amazing together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-card glass-card">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                            something great.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <span>manojsankar969@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>Hyderabad, Telangana, India</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/manojsankar969-oss" target="_blank" rel="noopener"
+                                class="social-link" aria-label="GitHub">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/manojsankark" target="_blank" rel="noopener"
+                                class="social-link" aria-label="LinkedIn">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form glass-card" id="contactForm" action="https://formspree.io/f/mqaeapnz"
+                        method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>MSK<span class="logo-bracket"> /&gt;</span>
+                </div>
+                <p class="footer-text">Designed & Crafted by <span class="accent">Manoj Sankar Kokkiligadda</span></p>
+                <p class="footer-copy">&copy; 2025 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal CSS Animation Trigger -->
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
