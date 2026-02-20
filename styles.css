@@ -685,10 +685,18 @@ textarea {
 
 /* Hero Stats */
 .hero-stats {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.hero-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
 }
 
 .stat {
