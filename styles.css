@@ -183,7 +183,7 @@ textarea {
 .cursor-dot.hover {
     width: 48px;
     height: 48px;
-    background: rgba(108, 99, 255, 0.15);
+    background: var(--accent-glow);
 }
 
 .cursor-outline.hover {
@@ -831,9 +831,58 @@ textarea {
    ============================================ */
 .about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: start;
+    grid-template-columns: 0.8fr 1.2fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.about-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-frame {
+    position: relative;
+    width: 280px;
+    height: 350px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.profile-frame:hover .profile-img {
+    transform: scale(1.05);
+}
+
+.frame-border {
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--accent-glow);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.frame-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.profile-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), var(--shadow-glow);
 }
 
 .about-card h3 {
@@ -992,7 +1041,7 @@ textarea {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.05), rgba(168, 85, 247, 0.05));
+    background: linear-gradient(135deg, var(--accent-glow), rgba(0, 242, 255, 0.05));
 }
 
 /* Project tags */
@@ -1047,7 +1096,7 @@ textarea {
     background: var(--accent-gradient);
     color: #fff;
     border-color: transparent;
-    box-shadow: 0 4px 16px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 4px 16px var(--accent-glow);
 }
 
 /* Project Grid */
@@ -1065,7 +1114,7 @@ textarea {
 
 .project-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 40px rgba(108, 99, 255, 0.15), var(--shadow-lg);
+    box-shadow: 0 0 40px var(--accent-glow), var(--shadow-lg);
 }
 
 .project-card-image {
@@ -1081,7 +1130,7 @@ textarea {
 .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(108, 99, 255, 0.15);
+    background: var(--accent-glow);
     backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
@@ -1519,6 +1568,15 @@ textarea {
 
 /* Tablet */
 @media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-image-wrapper {
+        grid-column: 1 / -1;
+        margin-bottom: 20px;
+    }
+
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1736,7 +1794,7 @@ textarea {
    SELECTION STYLES
    ============================================ */
 ::selection {
-    background: rgba(108, 99, 255, 0.3);
+    background: var(--accent-glow);
     color: var(--text-heading);
 }
 
@@ -1752,12 +1810,12 @@ textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(108, 99, 255, 0.25);
+    background: var(--accent-glow);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(108, 99, 255, 0.4);
+    background: rgba(0, 242, 255, 0.4);
 }
 
 /* ============================================
